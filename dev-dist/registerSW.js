@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) navigator.serviceWorker.register('/mind-vault/dev-sw.js?dev-sw', { scope: '/mind-vault/', type: 'classic' })

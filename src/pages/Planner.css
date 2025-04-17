@@ -1,0 +1,306 @@
+/* Planner.css */
+.planner-app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #111827;
+}
+
+.planner-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.date-display h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #111827;
+  background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.current-date {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  background: #f3f4f6;
+  padding: 6px;
+  border-radius: 12px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.tab {
+  padding: 8px 20px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #6b7280;
+}
+
+.tab.active {
+  background: white;
+  color: #6366f1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.task-input, .habit-input {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.task-input:focus, .habit-input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.add-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-button:hover {
+  background: #4f46e5;
+  transform: scale(1.05);
+}
+
+.task-stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.task-list, .habit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.empty-state p {
+  margin-top: 16px;
+  font-size: 1rem;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  margin-bottom: 12px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.task-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.task-checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.task-checkbox:hover {
+  border-color: #6366f1;
+}
+
+.unchecked-box {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  background: #f3f4f6;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.completed .task-text {
+  color: #9ca3af;
+  text-decoration: line-through;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  margin-left: 8px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+.task-item:hover .delete-button, 
+.habit-item:hover .delete-button {
+  opacity: 1;
+}
+
+.delete-button:hover {
+  background: #f3f4f6;
+  color: #ef4444;
+}
+
+.habit-item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  margin-bottom: 12px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.habit-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.habit-checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.habit-checkbox.checked {
+  background: #6366f1;
+  border-color: #6366f1;
+}
+
+.habit-info {
+  flex: 1;
+}
+
+.habit-name {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.streak-display {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.streak-count {
+  font-weight: 600;
+  color: #111827;
+}
+
+.streak-label {
+  margin-right: 4px;
+}
+
+.streak-fire {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .planner-app {
+    padding: 16px;
+  }
+  
+  .date-display h1 {
+    font-size: 1.8rem;
+  }
+  
+  .input-container {
+    flex-direction: column;
+  }
+  
+  .add-button {
+    width: 100%;
+    height: 48px;
+  }
+  
+  .task-item, .habit-item {
+    padding: 12px;
+  }
+  
+  .task-checkbox, .habit-checkbox {
+    margin-right: 12px;
+  }
+  
+  .delete-button {
+    opacity: 1;
+  }
+}
